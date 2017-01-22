@@ -2,7 +2,8 @@ var express= require('express');
 var app = express();
 
 app.get('/',function(req ,res){
-  res.send("welcome to our home page");
+//  res.send("welcome to our home page");
+  res.render('home.ejs');
 });
 
 app.get('/speak/:name',function (req ,res) {
@@ -20,6 +21,11 @@ var string =" ";
      string += req.params.string + ' '
   res.send(string);
   });
+
+app.get("/work/:stuff",function(req,res){
+  var stuff =req.params.stuff;
+  res.render("work.ejs",{myStuff:stuff})
+})
 
 app.get("*",function(req,res){
   res.send("sorry page not found");
