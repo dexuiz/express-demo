@@ -1,5 +1,6 @@
 var express= require('express');
 var app = express();
+app.use(express.static("public"));
 
 app.get('/',function(req ,res){
 //  res.send("welcome to our home page");
@@ -22,10 +23,23 @@ var string =" ";
   res.send(string);
   });
 
+  app.get("/posts",function(req,res){
+    var posts =[
+    {  title:'hello first post', author:'guy1' },
+    {  title:'this happens to be the second post' ,author:'man2'},
+    {  title:'third eh? not the worst rite?' ,author:'not3'}
+  ];
+
+     res.render('posts.ejs',{posts:posts});
+
+  });
+
 app.get("/work/:stuff",function(req,res){
   var stuff =req.params.stuff;
   res.render("work.ejs",{myStuff:stuff})
-})
+});
+
+
 
 app.get("*",function(req,res){
   res.send("sorry page not found");

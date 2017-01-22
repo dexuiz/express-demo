@@ -1,2 +1,10 @@
 
+<% include partials/header %>
+
 <h1> i own a : <%=myStuff.toUpperCase();%> </h1>
+
+<% if(myStuff.toLowerCase() === 'laptop') { %>
+  <p>Nailed it ,good call </p>
+<% } %>
+
+<% include partials/footer %>
