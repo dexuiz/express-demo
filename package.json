@@ -1,0 +1,22 @@
+{
+  "name": "express-demo",
+  "version": "1.0.0",
+  "description": "express demo app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dexuiz/express-demo.git"
+  },
+  "author": "dexuiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dexuiz/express-demo/issues"
+  },
+  "homepage": "https://github.com/dexuiz/express-demo#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
